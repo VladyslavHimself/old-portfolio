@@ -1,0 +1,127 @@
+*::selection {
+    background-color: $complimentary ;
+    opacity: .3;
+    color: #000;
+    
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: $background;
+    animation: fadeout 1s ease;
+}
+
+* {
+    cursor: none !important;
+}
+
+// NOTE Components
+
+// notifications part
+@import 'components/notification';
+
+// intro part
+@import 'components/intro';
+
+// introduce myself part
+@import 'components/introduceMyself';
+
+// skills part
+@import 'components/skills';
+
+// works part
+@import 'components/works';
+
+// contacts part
+@import 'components/contact';
+
+// contacts part
+@import 'components/navigation';
+
+
+
+// general support styles
+
+
+
+.hovers {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 0%;
+    height: 100vh;
+    background-color: #ffa500;
+    transition: 1s ease;
+    z-index: 9999;
+}
+
+
+a {
+
+    text-decoration: none;
+
+    $btnWidth: 250px;
+    $btnHeight: 70px;
+
+    .button {
+        margin: 10px;
+        width: $btnWidth;
+        height: $btnHeight;
+        background-color: #333;
+        color: #fff;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        transition: .3s ease;
+        
+        &:hover {
+            background-color: #222;
+            color: #fff;
+        }
+
+
+        &:active {
+            background-color: $complimentary;
+            width: calc(#{$btnWidth} + 10px);
+            height: calc(#{$btnHeight} + 5px);
+            color: #000;
+        }
+        
+    }
+
+ 
+}
+
+.footing {
+    a {
+        
+        text-decoration: none;
+        color: #000;
+        opacity: .5;
+        transition: .3s ease;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.light {
+    background-color: #f4f4f4 !important;
+    border: 1px solid #333 !important;
+    color: #333 !important;
+    font-weight: 800 !important;
+    transition: .3s ease;
+
+    letter-spacing: 5px;
+
+    font-weight: thin;
+    &:hover {
+        background-color: #333 !important;
+        color: #fff !important;
+    }
+}
+.animated {
+    animation: progress 1.2s ease;
+}
